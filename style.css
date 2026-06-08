@@ -1,0 +1,62 @@
+:root {
+  --bg: #0d1117;
+  --fg: #e6edf3;
+  --accent: #2ea043;
+  --grid: #161b22;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 { font-weight: 600; margin-bottom: 1rem; }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+button {
+  background: var(--grid);
+  color: var(--fg);
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+button:hover { background: #21262d; }
+
+#startStop {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  min-width: 80px;
+}
+
+label { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; }
+
+canvas {
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  image-rendering: pixelated;
+  cursor: crosshair;
+  max-width: 100%;
+}
+
+.hint { color: #7d8590; font-size: 0.8rem; margin-top: 0.75rem; }
+#genCount { font-variant-numeric: tabular-nums; color: #7d8590; }
